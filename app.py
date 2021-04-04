@@ -18,10 +18,20 @@ class fb_infoga:
 
   def banner(self):
     os.system('clear')
-    print('{cyan}************************'
-    print('{cyan}*      {green}FB-INFOGA       {cyan}*'
-    print('{cyan}************************'
-    print('{cyan}* {green}Author : {yellow}CyberKallan {cyan}*'
-    print('{cyan}* {green}Version : {yellow}0.0.1      {cyan}*'
-    print('{cyan}************************'
+    print("{cyan}************************")
+    print("{cyan}*      {green}FB-INFOGA       {cyan}*")
+    print("{cyan}************************")
+    print("{cyan}* {green}Author : {yellow}CyberKallan {cyan}*")
+    print("{cyan}* {green}Version : {yellow}0.0.1      {cyan}*")
+    print("{cyan}************************")
     print("".join([i for i in "\n"*3]))
+
+  def animate(self,params,result):
+    self.banner()
+    print(f"{green}Please Wait..")
+    t = td(target=self.setup,args=(params,))
+    while t.is_alive():
+      for i in "-\|/-\|/":
+        print(f'\r{c}Please wait {a}{i} ',end="",flush=True)
+        sleep(0.1)
+    print(f"\nDONE !\n\n{result}")
