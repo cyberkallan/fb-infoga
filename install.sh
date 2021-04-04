@@ -2,4 +2,5 @@
 
 apt-get update && apt-get upgrade -y
 apt-get install python -y
-apt-get install sqlite -y
+echo ""
+echo "Done! Now you can run 'pip install requirements.txt' commands."
